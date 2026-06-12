@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Test Drive - NextDrive EV</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#071a3d;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+}
+
+form{
+    background:#102b63;
+    padding:25px;
+    border-radius:15px;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    background:#00ff88;
+    color:black;
+    padding:15px 25px;
+    border:none;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.button{
+    display:inline-block;
+    background:#00ff88;
+    color:black;
+    padding:12px 20px;
+    border-radius:10px;
+    text-decoration:none;
+    margin-bottom:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="electric-vehicles.html" class="button">
+← Back to Vehicles
+</a>
+
+<h1>Book a Test Drive</h1>
+
+<form action="https://formsubmit.co/nextdriveev1@gmail.com" method="POST">
+
+<input type="text" name="Name" placeholder="Full Name" required>
+
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+
+<input type="email" name="Email" placeholder="Email Address" required>
+
+<select name="Vehicle" required>
+<option value="">Select Vehicle</option>
+<option>LEV01</option>
+<option>LEV05</option>
+<option>NETA X 500 Luxury</option>
+<option>Wuling Bingo S</option>
+</select>
+
+<input type="date" name="Preferred Date" required>
+
+<textarea name="Message" rows="5" placeholder="Additional Information"></textarea>
+
+<button type="submit">
+Book Test Drive
+</button>
+
+</form>
+
+</div>
+
+</body>
+  </html>
