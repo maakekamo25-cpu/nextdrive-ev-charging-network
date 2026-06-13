@@ -2,6 +2,7 @@
   "name": "NextDrive EV",
   "short_name": "NextDrive EV",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#071a3d",
   "theme_color": "#071a3d",
