@@ -57,6 +57,18 @@ border-radius:10px;
 
 <p>Estimate your monthly vehicle payment.</p>
 
+  <h3>Select a Vehicle</h3>
+
+<button onclick="setVehiclePrice(579900)">LEV01 - R579,900</button>
+
+<button onclick="setVehiclePrice(579900)">LEV05 - R579,900</button>
+
+<button onclick="setVehiclePrice(539900)">NETA X 500 - R539,900</button>
+
+<button onclick="setVehiclePrice(299990)">Wuling Bingo S - R299,990</button>
+
+<br><br>
+  
 <label>Vehicle Price (R)</label>
 <input type="number" id="price" placeholder="e.g. 539900">
 
@@ -88,6 +100,10 @@ Apply For Finance
 </div>
 
 <script>
+  function setVehiclePrice(price){
+document.getElementById("price").value = price;
+  }
+  
 function calculateFinance(){
 
 let price =
