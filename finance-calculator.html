@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Finance Calculator - NextDrive EV</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#071a3d;
+color:white;
+padding:20px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+}
+
+input{
+width:100%;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+border:none;
+}
+
+button,.btn{
+display:inline-block;
+background:#00ff88;
+color:black;
+padding:15px 25px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+border:none;
+cursor:pointer;
+}
+
+.result{
+margin-top:20px;
+padding:20px;
+background:#102b63;
+border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="index.html" class="btn">
+← Back to Home
+</a>
+
+<h1>Vehicle Finance Calculator</h1>
+
+<p>Estimate your monthly vehicle payment.</p>
+
+<label>Vehicle Price (R)</label>
+<input type="number" id="price" placeholder="e.g. 539900">
+
+<label>Deposit (R)</label>
+<input type="number" id="deposit" placeholder="e.g. 50000">
+
+<label>Loan Term (Months)</label>
+<input type="number" id="months" placeholder="e.g. 72">
+
+<button onclick="calculateFinance()">
+Calculate
+</button>
+
+<div class="result">
+<h2>Estimated Monthly Payment</h2>
+<p id="result">R0.00</p>
+</div>
+
+</div>
+
+<script>
+function calculateFinance(){
+
+let price =
+parseFloat(document.getElementById("price").value) || 0;
+
+let deposit =
+parseFloat(document.getElementById("deposit").value) || 0;
+
+let months =
+parseFloat(document.getElementById("months").value) || 1;
+
+let amount = price - deposit;
+
+let monthly = amount / months;
+
+document.getElementById("result").innerHTML =
+"R" + monthly.toFixed(2) + " per month";
+}
+</script>
+
+</body>
+</html>
