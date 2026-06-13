@@ -76,6 +76,13 @@ Calculate
 <div class="result">
 <h2>Estimated Monthly Payment</h2>
 <p id="result">R0.00</p>
+  
+  <br>
+
+<a href="https://wa.me/27677722105?text=Hi%20NextDrive%20EV,%20I%20would%20like%20to%20apply%20for%20vehicle%20finance." class="btn">
+Apply For Finance
+</a>
+  
 </div>
 
 </div>
@@ -92,14 +99,22 @@ parseFloat(document.getElementById("deposit").value) || 0;
 let months =
 parseFloat(document.getElementById("months").value) || 1;
 
+let interest =
+parseFloat(document.getElementById("interest").value) || 0;
+
 let amount = price - deposit;
 
-let monthly = amount / months;
+let totalAmount =
+amount + (amount * (interest / 100));
+
+let monthly =
+totalAmount / months;
 
 document.getElementById("result").innerHTML =
-"R" + monthly.toFixed(2) + " per month";
+"Estimated Monthly Payment: R" +
+monthly.toFixed(2);
 }
-</script>
+  </script>
 
 </body>
 </html>
